@@ -175,14 +175,76 @@ Jaccard similarity $sim(C_1, C_2) = \frac{a}{a+b+c}$
 
 Claim :  $Pr[h(C_{1}) = h(C_{2})] = sim(C_1, C_2)$
 
-If you look up the two docuemnt column(shingle), both of them is equal to 1. it's a type A-row
+If you look up the two docuemnt column(shingle), both of them is equal to 1. it's a type A-row.
 
-TODO, 39:22
+so the # of type A = hit 1, 1
 
-https://www.youtube.com/watch?v=dRWO3il-jjA&list=PLoCMsyE1cvdVnCgHk43vRy7PVTVWJ6WVR&index=4
+and the # of type B, C = hit 0, 1 or hit 1, 0
 
+and the # of type D won't be considered 
+
+## Similarity for Signatures
+
+We know 
+
+$Pr[h(C_{1}) = h(C_{2})] = sim(C_1, C_2)$
+
+Now generalize to multiple hash functions.
+
+Recall the signature matrix $M$
+
+<img src='./assets/lsh_24.png'></img>
+
+And we can expected : longer the sifnatures, the smaller the error will be.
+
+<img src='./assets/lsh_27.png'></img>
+
+
+Now we consider Smignature Matrix $M$ for sigature = 3, document = 4
+
+<img src='./assets/lsh_28.png'></img>
+
+consider Jaccard sim
+
+c1 vs c3 = $\frac{3}{4}$ (Intersetion over Union)
+
+sig_1 vs sig 3 = $\frac{2}{3}$  - they share $2$, $1$
+
+In this case, we perserve the similarity order by transform the Shingles into signature.
+
+# Implementation Trick
+
+<img src='./assets/lsh_29.png'></img>
+
+prohibitive - adj 禁止的
+
+algo : 
+
+<img src='./assets/lsh_30.png'></img>
+
+Do the homework =)
+
+Q : what's the difference between characters versus words?
+
+A : it depends on your goal.
+
+if your goal is to find documents that have mispelled words, predict the mis-spwllinf words - then do it at the character level.
+
+
+if you wanna compare the document similarity, then shilingling at word level(or even paragraph level)
+
+# Locality Sensitive Hashing
+
+<img src='./assets/lsh_31.png'></img>
+
+
+TODO
+
+44 mins
 # Stats
 
 1 hour - 20mins
 
 1 hour - 20 mins
+
+25 mins - 5 mins
