@@ -238,9 +238,92 @@ if you wanna compare the document similarity, then shilingling at word level(or 
 <img src='./assets/lsh_31.png'></img>
 
 
-TODO
+We have signaturee matrix. Now we need to find paire in signature matrix.
 
-44 mins
+<img src='./assets/lsh_32.png'></img>
+
+cadidate pair : because there might be false positve and false negtive.
+
+we will use another set of hash function. hash signature matrix $M$ to many buckets.
+
+Each pair of documents that hashes into the same bucket is a candidate pair.
+
+<img src='./assets/lsh_33.png'></img>
+
+$M(i, x) = M(i, y)$ for at least frac means jaccard similarity of documents of $x$ and $y$
+
+e.g.
+
+$x = 1, y = 3$, $sim = \frac{2}{3}$
+
+<img src='./assets/lsh_34.png'></img>
+
+<img src='./assets/lsh_35.png'></img>
+
+make $k$ as large as possible, because we wanna have collisions when documents are similar.
+
+<img src='./assets/lsh_36.png'></img>
+
+## Assumption
+
+same buket menas identical in that band(well, basically, they are just similar, not the same)
+
+<img src='./assets/lsh_38.png'></img>
+
+## Example Assume ($C_1$, $C_2$ are 80% Simmilar)
+
+<img src='./assets/lsh_39.png'></img>
+
+Start with Signatures Matrix $M$ with 100k docs and 100 integers(100 hash functions)
+
+pick bands $b=20$, rows per band $r=5$
+
+<img src='./assets/lsh_40.png'></img>
+
+<img src='./assets/lsh_41.png'></img>
+
+same bucket -> they are similar,
+
+
+the probability $C_1$ and $C_2$ share same hash values == their similarity. which is 0.8
+
+Now, a band with 5 rows means we need to match 5 rows. 
+
+Means the prabability hashing $C_1, C_2$ into same bucket is $(0.8)^{5} = 0.328$
+
+Now, what's the probability $C_1, C_2$ are not similar in all of the 20 bands?
+
+$(1 - 0.328)^{20} = 0.00035$
+
+means 
+
+1. we might miss the cadidate pair(80% similar pair) with $\frac{1}{3000}$, they are **false negtive**
+
+2. we would find **99.965% pairs of truly similar documents**(basically all of them...)
+
+## Example Assume ($C_1$, $C_2$ are 30% Simmilar)
+
+<img src='./assets/lsh_42.png'></img>
+
+think about the other side,
+
+$sim(C_1, C_2) < s$, we want $C_1, C_2$ to hash to No common buckets.(all bands should be different.)
+
+1. prob of $C_1, C_2$ in one particular band : $(0.3)^{5} = 0.00243$
+
+2. prob $C_1, C_2$ are not similar in all of the 20 bands : $(1 - 0.00243) ^{20} = 0.952$
+
+3. prob $C_1, C_2$ identical in at least 1 of 20 bands : $1 - 0.953 = 0.0474$
+
+Means : approximately $0.0474$ pairs of docs with similarity 0.3 end up becoming candidate pairs (**false positive**)
+
+## LSH Involves a Tradeoff
+
+<img src='./assets/lsh_43.png'></img>
+
+tuning different $b$ and $r$, we get different flase positive and false negtives.
+
+1:03:29
 # Stats
 
 1 hour - 20mins
@@ -248,3 +331,7 @@ TODO
 1 hour - 20 mins
 
 25 mins - 5 mins
+
+40 mins - 15 mins
+
+1 hour - 15 mins
