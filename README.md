@@ -7,13 +7,17 @@
 
 topic|start date|note
 -----|-----|-----
-L3 - Locality Sensitive Hashing | N/A | 
-
-# Records
-topic|date|note
------|-----|-----
-Finding Frequent Items | N/A | [Locality-sensitive hashing(LSH) algorithm](https://github.com/PiotrTa/Mining-Massive-Datasets/blob/master/Duplicate%20detection%20with%20LSH/Duplicate%20detection%20with%20LSH.ipynb)
+L3 - Locality Sensitive Hashing | 5/31, 20 |
+L4 - Theorem of LSH |  |
 
 
-# Code
+
+# Reference
+
 [PiotrTa/Mining-Massive-Datasets 8+ stars](https://github.com/PiotrTa/Mining-Massive-Datasets)
+
+[Locality-sensitive hashing(LSH) algorithm](https://github.com/PiotrTa/Mining-Massive-Datasets/blob/master/Duplicate%20detection%20with%20LSH/Duplicate%20detection%20with%20LSH.ipynb)
+
+[LSH random projection code](https://santhoshhari.github.io/Locality-Sensitive-Hashing/)
+
+[LSH  - random projection post](https://towardsdatascience.com/understanding-locality-sensitive-hashing-49f6d1f6134)
