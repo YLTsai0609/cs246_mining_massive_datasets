@@ -323,8 +323,66 @@ Means : approximately $0.0474$ pairs of docs with similarity 0.3 end up becoming
 
 tuning different $b$ and $r$, we get different flase positive and false negtives.
 
-1:03:29
+rows per band $r = 5$, bands $b=20$ -> rows per band$r=10$, bands $b=10$ fp go down, fn go up.
+
+## The Analysis of LSH - What We Want
+
+
+<img src='./assets/lsh_45.png'></img>
+
+<img src='./assets/lsh_46.png'></img>
+
+<img src='./assets/lsh_47.png'></img>
+
+If 1 bnads of 1 rows. we have the min hashing properties. we start from a straight line.
+
+And we wanna achieve our goal like the step function.
+
+
+<img src='./assets/lsh_48.png'></img>
+
+If we pick a threshold $s$
+
+<img src='./assets/lsh_49.png'></img>
+
+$b$ bands, $r$ rows/band
+
+1. col $C_1$, $C_2$ have similarity $t$
+2. pick any band $r$ rows
+   1. prob : all rows in band equal = $t^{r}$
+   2. prob : some row in band unequal = $1 - t^{r}$
+3. prob : no band identical = $(1 - t^{r})^{b}$
+4. prob : at least 1 band identical = $1 - (1 - t^{r})^{b}$ - prob of sharing the buckets.
+
+well, the b bands fo r rows will give one a step function.
+
+<img src='./assets/lsh_50.png'></img>
+
+<img src='./assets/lsh_51.png'></img>
+
+<img src='./assets/lsh_52.png'></img>
+
+The more hash func we take, the more shaper the cure will be.
+
+Q : In a normal situation, which one is more important?
+
+A : reduce false negtive is first priority, because after one pass, we lose them forever(they are candidate), and we can filter false positve easily.
+
+So, in this case, $s = 0.6$ might not be good, but it will be good with $s=0.8$
+
+
+Q : Can we make our input with dense vector or something else?
+
+A : Yes, they $r$ anf $b$ will stay the same, but the hash function will change respect to your similarity function. So, we're able to handle dense vector, binary vector, what ever you like, with different hash func.
+
+# Summary
+
+1. Shingling : Convert documents to set representation.
+2. Min-Hsdhing - Convert larget sets to short signatures, while preserving similarity.
+3. Locality-Sensitive Hadhing : Focus on pairs of signatures likely to be from similar documents.
+
 # Stats
+
 
 1 hour - 20mins
 
