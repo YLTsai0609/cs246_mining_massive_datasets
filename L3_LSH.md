@@ -85,6 +85,8 @@ When you build such a matrix. you can calculate the jaccard similarity between e
 
 notice the warning, these methods can produce flase negtive, even false positive.
 
+<img src='./assets/lshn_1.jpg'></img>
+
 # Min-Hashing
 
 <img src='./assets/lsh_14.png'></img>
@@ -104,6 +106,7 @@ If sim($C_{1}$, $C_{2}$) is low, then with high prob $h(C_{1})$ != $h({C_{2}})$
 Interesting thing : we need a custom collision to match our algorithm!
 
 <img src='./assets/lsh_18.png'></img>
+
 
 Jaccard similarity <---> Min-Hashing
 
@@ -183,6 +186,9 @@ and the # of type B, C = hit 0, 1 or hit 1, 0
 
 and the # of type D won't be considered 
 
+<img src='./assets/lshn_2.jpg'></img>
+
+<img src='./assets/lshn_3.jpg'></img>
 ## Similarity for Signatures
 
 We know 
