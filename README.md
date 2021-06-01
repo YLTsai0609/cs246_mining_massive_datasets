@@ -7,7 +7,7 @@
 
 topic|start date|note
 -----|-----|-----
-L3 - Locality Sensitive Hashing | 5/31, 20 |
+L3 - Locality Sensitive Hashing | 5/31, 20 | Review 6/2, 20
 L4 - Theorem of LSH |  |
 
 
