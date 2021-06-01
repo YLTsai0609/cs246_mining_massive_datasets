@@ -404,3 +404,7 @@ A : Yes, they $r$ anf $b$ will stay the same, but the hash function will change 
 40 mins - 15 mins
 
 1 hour - 15 mins
+
+1 hour - 15 mins
+
+TOtal : 5 hr + review( 2 hr)
