@@ -189,6 +189,7 @@ and the # of type D won't be considered
 <img src='./assets/lshn_2.jpg'></img>
 
 <img src='./assets/lshn_3.jpg'></img>
+
 ## Similarity for Signatures
 
 We know 
@@ -218,6 +219,8 @@ sig_1 vs sig 3 = $\frac{2}{3}$  - they share $2$, $1$
 
 In this case, we perserve the similarity order by transform the Shingles into signature.
 
+<img src='./assets/lshn_4.jpg'></img>
+
 # Implementation Trick
 
 <img src='./assets/lsh_29.png'></img>
@@ -241,10 +244,12 @@ if you wanna compare the document similarity, then shilingling at word level(or 
 
 # Locality Sensitive Hashing
 
+<img src='./assets/lshn_5.jpg'></img>
+
 <img src='./assets/lsh_31.png'></img>
 
 
-We have signaturee matrix. Now we need to find paire in signature matrix.
+We have signaturee matrix. Now we need to find pairs in signature matrix.
 
 <img src='./assets/lsh_32.png'></img>
 
