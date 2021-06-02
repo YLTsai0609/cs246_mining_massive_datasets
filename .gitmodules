@@ -1,0 +1,3 @@
+[submodule "mms_8"]
+	path = mms_8
+	url = https://github.com/PiotrTa/Mining-Massive-Datasets.git
