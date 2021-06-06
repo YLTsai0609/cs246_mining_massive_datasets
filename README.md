@@ -21,3 +21,5 @@ L4 - Theorem of LSH |  |
 [LSH random projection code](https://santhoshhari.github.io/Locality-Sensitive-Hashing/)
 
 [LSH  - random projection post](https://towardsdatascience.com/understanding-locality-sensitive-hashing-49f6d1f6134)
+
+[LSH - Jaccard implementation github](https://github.com/Jmkernes/Locality-sensitive-hashing-tutorial/blob/main/LocalitySensitiveHashing.ipynb)
