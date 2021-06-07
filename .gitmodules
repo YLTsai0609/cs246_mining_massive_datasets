@@ -1,3 +1,7 @@
 [submodule "mms_8"]
 	path = mms_8
 	url = https://github.com/PiotrTa/Mining-Massive-Datasets.git
+
+[submodule "lsh_jaccard"]
+	path = lsh_jaccard
+	url = https://github.com/Jmkernes/Locality-sensitive-hashing-tutorial
