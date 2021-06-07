@@ -113,7 +113,6 @@ $$
 
 first thing we will talking about is why the bands techniqque works.
 
-<img src='./assets/lshtm_16.png'></img>
 
 If we apply the LS Family into row in bands $r$,
 

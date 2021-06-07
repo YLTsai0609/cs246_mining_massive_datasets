@@ -7,8 +7,16 @@
 
 topic|start date|note
 -----|-----|-----
-L3 - Locality Sensitive Hashing | 5/31, 20 | Review 6/2, 20
-L4 - Theorem of LSH |  |
+L3 - Locality Sensitive Hashing | 5/31, 21 | Review 6/2, 21
+L4 - Theorem of LSH | 6/6, 21 |
+
+
+# Code Study
+
+topic|name|start date|note
+-----|-----|-----|-----
+lsh | [lsh cosine by random projection](https://santhoshhari.github.io/Locality-Sensitive-Hashing/) | 20210606
+lsh |[lsh, yelp near duplicate review detection cosine](https://github.com/PiotrTa/Mining-Massive-Datasets/blob/master/Duplicate%20detection%20with%20LSH/Duplicate%20detection%20with%20LSH.ipynb)|20210601||
 
 
 
@@ -16,10 +24,13 @@ L4 - Theorem of LSH |  |
 
 [PiotrTa/Mining-Massive-Datasets 8+ stars](https://github.com/PiotrTa/Mining-Massive-Datasets)
 
-[Locality-sensitive hashing(LSH) algorithm](https://github.com/PiotrTa/Mining-Massive-Datasets/blob/master/Duplicate%20detection%20with%20LSH/Duplicate%20detection%20with%20LSH.ipynb)
 
 [LSH random projection code](https://santhoshhari.github.io/Locality-Sensitive-Hashing/)
 
 [LSH  - random projection post](https://towardsdatascience.com/understanding-locality-sensitive-hashing-49f6d1f6134)
 
 [LSH - Jaccard implementation github](https://github.com/Jmkernes/Locality-sensitive-hashing-tutorial/blob/main/LocalitySensitiveHashing.ipynb)
+
+[random projection vs pca](https://nbviewer.jupyter.org/github/lindarliu/blog/blob/master/Random%20Projection%20and%20its%20application.ipynb)
+
+[Bucketed Random Projection LSH 算法Spark+Hadoop+Redis實現](https://medium.com/@zihansyu/lsh-%E7%AE%97%E6%B3%95spark-hadoop-redis%E5%AF%A6%E7%8F%BE-5e4da36ea1b8)
